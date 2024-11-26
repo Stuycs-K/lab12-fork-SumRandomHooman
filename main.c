@@ -7,7 +7,7 @@
 
 int rand(){
   int buff[1];
-  int random = open("/dev/random", O_RDONLY, 0);
+  int random = open("/dev/urandom", O_RDONLY, 0);
   read(random,buff,4);
   close(random);
   if(buff[0] < 0){
